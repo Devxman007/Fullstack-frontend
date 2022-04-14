@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     countItems(cartItems);
-  }, [cartItemsCount]);
+  });
 
   const countItems = (cartItemsCopy) => {
     const countItems = cartItemsCopy.map((p) => (sum = sum + p.qtyy));
