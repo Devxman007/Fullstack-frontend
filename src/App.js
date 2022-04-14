@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     countItems(cartItems);
-  }, [cartItemsCount]);
+  });
 
   const countItems = (cartItemsCopy) => {
     const countItems = cartItemsCopy.map((p) => (sum = sum + p.qtyy));
@@ -66,7 +66,9 @@ function App() {
   };
   const cartProductsItemdecrement = async (id) => {
     const product = await getProduct(id);
+
     let cartItemsCopy = Array.from(cartItems);
+
     if (product) {
       const existProduct = cartItemsCopy.find(
         (item) => item._id === product._id
