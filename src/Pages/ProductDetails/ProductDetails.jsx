@@ -22,6 +22,7 @@ const ProductDetails = ({ cartProductsItems, cartItemsCount }) => {
   const { id } = params;
   const [product, setProduct] = useState();
   const [qtyy, setQtyy] = useState(1);
+
   useEffect(() => {
     if (id) getProductById(id);
   }, [id]);
