@@ -33,7 +33,7 @@ function App() {
 
   const countItems = (cartItemsCopy) => {
     const countItems = cartItemsCopy.map((p) => (sum = sum + p.qtyy));
-    console.log(countItems);
+
     setCartItemsCount(countItems);
   };
 
@@ -51,7 +51,7 @@ function App() {
       const existProduct = cartItemsCopy.find(
         (item) => item._id === product._id
       );
-      console.log(existProduct, "exist");
+
       if (existProduct) {
         cartItemsCopy = cartItems.map((item) =>
           item._id === product._id
@@ -67,11 +67,10 @@ function App() {
     const product = await getProduct(id);
     let cartItemsCopy = Array.from(cartItems);
     if (product) {
-      console.log(cartItemsCopy, "cartItemsCopy");
       const existProduct = cartItemsCopy.find(
         (item) => item._id === product._id
       );
-      console.log(existProduct, "exist");
+
       if (existProduct.qtyy > 1) {
         cartItemsCopy = cartItems.map((item) =>
           item._id === product._id
@@ -93,11 +92,10 @@ function App() {
     const product = await getProduct(id);
     let cartItemsCopy = Array.from(cartItems);
     if (product) {
-      console.log(cartItemsCopy, "cartItemsCopy");
       const existProduct = cartItemsCopy.find(
         (item) => item._id === product._id
       );
-      console.log(existProduct, "exist");
+
       if (existProduct) {
         cartItemsCopy = cartItems.map((item) =>
           item._id === product._id
