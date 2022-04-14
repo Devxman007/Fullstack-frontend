@@ -1,5 +1,5 @@
-const SERVER_URL = "http://localhost:4000/admin/";
-const SERVER_URL2 = "http://localhost:4000/admin/order/";
+const SERVER_URL = `${process.env.REACT_APP_API_URL}/admin/`;
+const SERVER_URL2 = `${process.env.REACT_APP_API_URL}/admin/order/`;
 
 export const getProducts = async () => {
   try {
