@@ -66,7 +66,9 @@ function App() {
   };
   const cartProductsItemdecrement = async (id) => {
     const product = await getProduct(id);
+
     let cartItemsCopy = Array.from(cartItems);
+
     if (product) {
       const existProduct = cartItemsCopy.find(
         (item) => item._id === product._id
