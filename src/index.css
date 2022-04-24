@@ -10,6 +10,11 @@ main {
   min-height:  80vh;
 }
 
+.my-3.p-3.rounded.card a img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
 .rating span
 {
   margin: 0.1rem;
