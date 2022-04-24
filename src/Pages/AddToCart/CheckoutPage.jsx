@@ -149,14 +149,7 @@ const CheckoutPage = ({
                   />
                 </div>
               </form>
-              <p>{order.Name}</p>
-              <p>{order.Adresse}</p>
-              {order.products.map((p, index) => (
-                <div>
-                  <p key={p._id + index}>{p.Name}</p>
-                  <p>{p.Price}</p>
-                </div>
-              ))}
+
               <div className="col-md-12 d-flex flex-row-reverse">
                 <div className="col-md-4">
                   <div className="card card-body mt-3">
